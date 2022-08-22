@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row text-center border border-primary">
+            <div class="col">
+                <h3>Company Name :</h3>
+            </div>
+            <div class="col">
+                <h5>{{ context.name }}</h5>
+            </div>
+        </div>
+        <div class="row text-center border border-primary">
+            <div class="col">
+                <h3>Note :</h3>
+            </div>
+            <div class="col">
+                <h5>{{ context.note }}</h5>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h3><a href="{% url 'editcompany' context.id %}">Edit Company</a></h3>
+{% endblock content %}
